@@ -1,0 +1,67 @@
+
+> modo-web@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.168:3000
+
+✓ Starting...
+✓ Ready in 604ms
+○ Compiling / ...
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 3.6s (compile: 3.4s, render: 120ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 80ms (compile: 22ms, render: 58ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 237ms (compile: 113ms, render: 123ms)
+ GET / 200 in 309ms (compile: 135ms, render: 174ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 148ms (compile: 49ms, render: 99ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 261ms (compile: 114ms, render: 147ms)
+ GET / 200 in 99ms (compile: 39ms, render: 60ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 78ms (compile: 30ms, render: 48ms)
+ GET / 200 in 78ms (compile: 14ms, render: 65ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 85ms (compile: 28ms, render: 58ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 66ms (compile: 7ms, render: 59ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 99ms (compile: 42ms, render: 58ms)
+ GET / 200 in 69ms (compile: 35ms, render: 34ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 60ms (compile: 14ms, render: 46ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 149ms (compile: 66ms, render: 83ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 380ms (compile: 150ms, render: 230ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 107ms (compile: 7ms, render: 100ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 290ms (compile: 109ms, render: 180ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET / 200 in 605ms (compile: 253ms, render: 352ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET /en/about 404 in 2.6s (compile: 2.5s, render: 175ms)
+ GET /en/about-us 404 in 593ms (compile: 32ms, render: 562ms)
+ GET /en/results 404 in 163ms (compile: 10ms, render: 153ms)
+ GET / 200 in 95ms (compile: 16ms, render: 79ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET /en/results 404 in 276ms (compile: 107ms, render: 169ms)
+ GET /results 200 in 3.1s (compile: 2.5s, render: 538ms)
+ GET /en/about 404 in 123ms (compile: 29ms, render: 94ms)
+ GET /en/about-us 404 in 153ms (compile: 11ms, render: 143ms)
+ GET /results 200 in 171ms (compile: 45ms, render: 126ms)
+ GET /en/results 404 in 237ms (compile: 32ms, render: 205ms)
+ GET / 200 in 196ms (compile: 9ms, render: 187ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET /about 404 in 191ms (compile: 25ms, render: 166ms)
+ GET /results 200 in 207ms (compile: 14ms, render: 193ms)
+ GET /about-us 200 in 2.6s (compile: 2.2s, render: 377ms)
+ GET /results 200 in 591ms (compile: 21ms, render: 570ms)
+ GET / 200 in 225ms (compile: 22ms, render: 202ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1579165466741-7f35a4755657?q=80&w=2488&auto=format&fit=crop 404
+ GET /techniques/robotic-dhi 200 in 1685ms (compile: 1545ms, render: 141ms)
