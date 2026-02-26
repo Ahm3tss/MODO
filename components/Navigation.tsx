@@ -21,10 +21,10 @@ export function Navigation() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Prevent body scroll when mobile menu is open
+    // Pause Lenis smooth scroll while the mobile menu is open so the
+    // background page doesn't scroll through the overlay
     useEffect(() => {
-        document.body.style.overflow = isOpen ? "hidden" : "";
-        return () => { document.body.style.overflow = ""; };
+        window.dispatchEvent(new Event(isOpen ? "lenis-stop" : "lenis-start"));
     }, [isOpen]);
 
     return (
@@ -96,7 +96,7 @@ export function Navigation() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="lg:hidden bg-[#020410]/98 backdrop-blur-xl border-t border-white/5 max-h-[calc(100vh-5rem)] overflow-y-auto">
+                <div className="lg:hidden bg-[#020410]/98 backdrop-blur-xl border-t border-white/5 max-h-[calc(100vh-5rem)] overflow-y-auto" data-lenis-prevent>
                     <div className="max-w-7xl mx-auto px-6 py-8 space-y-6">
                         {c.links.map((link) => {
                             if ("items" in link && link.items) {
