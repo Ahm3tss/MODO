@@ -47,13 +47,6 @@ export const metadata: Metadata = {
   },
 };
 
-import { Navigation } from "@/components/Navigation";
-import { SmoothScroll } from "@/components/SmoothScroll";
-import { Footer } from "@/components/Footer";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { GlobalRails } from "@/components/GlobalRails";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -62,12 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${montserrat.variable} ${playfair.variable} scroll-smooth`}>
       <body className="font-sans bg-[#020410] text-white antialiased selection:bg-accent selection:text-white overflow-x-hidden">
-        <GlobalRails />
-        <SmoothScroll />
-        <Navigation />
         {children}
-        <Footer />
-        <WhatsAppButton />
       </body>
     </html>
   );

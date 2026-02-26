@@ -21,6 +21,12 @@ export function Navigation() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Pause Lenis smooth scroll while the mobile menu is open so the
+    // background page doesn't scroll through the overlay
+    useEffect(() => {
+        window.dispatchEvent(new Event(isOpen ? "lenis-stop" : "lenis-start"));
+    }, [isOpen]);
+
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#020410]/90 backdrop-blur-xl border-b border-white/5" : "bg-transparent"}`}>
             <div className="max-w-7xl mx-auto px-6">
@@ -90,7 +96,7 @@ export function Navigation() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="lg:hidden bg-[#020410]/98 backdrop-blur-xl border-t border-white/5">
+                <div className="lg:hidden bg-[#020410]/98 backdrop-blur-xl border-t border-white/5 max-h-[calc(100vh-5rem)] overflow-y-auto" data-lenis-prevent>
                     <div className="max-w-7xl mx-auto px-6 py-8 space-y-6">
                         {c.links.map((link) => {
                             if ("items" in link && link.items) {

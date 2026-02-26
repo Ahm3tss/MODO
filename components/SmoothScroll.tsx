@@ -14,6 +14,12 @@ export function SmoothScroll() {
             touchMultiplier: 2,
         });
 
+        // Allow Navigation to pause/resume scroll when mobile menu opens
+        const stop = () => lenis.stop();
+        const start = () => lenis.start();
+        window.addEventListener("lenis-stop", stop);
+        window.addEventListener("lenis-start", start);
+
         function raf(time: number) {
             lenis.raf(time);
             requestAnimationFrame(raf);
@@ -23,6 +29,8 @@ export function SmoothScroll() {
 
         return () => {
             lenis.destroy();
+            window.removeEventListener("lenis-stop", stop);
+            window.removeEventListener("lenis-start", start);
         };
     }, []);
 
