@@ -7,17 +7,20 @@ import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { PremiumButton } from "@/components/UI/PremiumButton";
 import { content } from "@/lib/content";
+import { saveSubmission } from "@/app/admin/actions/submissions";
 
 const c = content.contact;
 
 export default function Contact() {
     const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        await saveSubmission(formData);
         const whatsappNumber = "905323898193";
         const text = `${c.form.whatsappGreeting} ${formData.name}. ${formData.message}`;
         window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, "_blank");
+        setFormData({ name: "", email: "", phone: "", message: "" });
     };
 
     return (
