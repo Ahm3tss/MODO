@@ -20,11 +20,11 @@ export default function BlogAdminClient({ posts }: { posts: Post[] }) {
 
   const handleDelete = (id: string, title: string) => {
     if (!confirm(`Delete "${title}"? This cannot be undone.`)) return;
-    startTransition(() => deletePost(id));
+    startTransition(async () => { await deletePost(id); });
   };
 
   const handleToggle = (id: string, current: boolean) => {
-    startTransition(() => togglePublish(id, current));
+    startTransition(async () => { await togglePublish(id, current); });
   };
 
   return (
