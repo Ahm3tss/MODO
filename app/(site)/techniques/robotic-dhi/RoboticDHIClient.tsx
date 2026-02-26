@@ -140,7 +140,7 @@ export default function RoboticDHIClient({ animatedStats: animatedStatsProp }: R
         <div className="max-w-7xl mx-auto px-6 relative">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             {animatedStats.map((stat) => (
-              <AnimatedCounter key={stat.label} value={stat.value} suffix={stat.suffix} label={stat.label} />
+              <AnimatedCounter key={stat.label} value={Number(stat.value)} suffix={stat.suffix} label={stat.label} />
             ))}
           </div>
         </div>

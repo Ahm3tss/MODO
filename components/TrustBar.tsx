@@ -23,7 +23,7 @@ export function TrustBar({ stats = fallbackStats }: TrustBarProps) {
                     {stats.map((stat) => (
                         <div key={stat.label} className="text-center">
                             <div className="text-3xl md:text-4xl font-black text-white">
-                                <AnimatedCounter value={stat.value} />{stat.suffix}
+                                <AnimatedCounter value={Number(stat.value)} />{stat.suffix}
                             </div>
                             <div className="text-slate-500 font-mono text-xs uppercase tracking-widest mt-1">{stat.label}</div>
                         </div>
